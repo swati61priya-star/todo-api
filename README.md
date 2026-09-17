@@ -1,4 +1,4 @@
-cd G:\todo-api\todo-apicd G:\todo-api\todo-api# 🌸 Daily Planner — Todos + Journal
+🌸 Daily Planner — Todos + Journal
 
 A cozy, pastel, animated to-do list **and** daily journal, in one app:
 
