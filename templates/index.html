@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>little moments ✨ todos & journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="floaties" aria-hidden="true">
+    <span>🌸</span><span>🍃</span><span>✨</span><span>🌼</span><span>🦋</span><span>💫</span>
+  </div>
+
+  <div class="app">
+
+    <header class="hero">
+      <div class="hero-tape tape-left"></div>
+      <div class="hero-tape tape-right"></div>
+      <p class="eyebrow">little moments, big memories</p>
+      <h1>daily <span class="script">planner</span></h1>
+      <p class="date" id="today-date"></p>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="todos" role="tab">✅ &nbsp;to‑dos</button>
+      <button class="tab-btn" data-tab="journal" role="tab">📔 &nbsp;journal</button>
+    </nav>
+
+    <!-- ================= TODOS PANEL ================= -->
+    <section id="panel-todos" class="panel active">
+
+      <div class="card form-card">
+        <form id="todo-form">
+          <div class="row">
+            <input type="text" id="title" placeholder="what needs to be done? 🌷" required maxlength="200">
+          </div>
+          <div class="row">
+            <input type="text" id="description" placeholder="a little detail (optional)" maxlength="500">
+          </div>
+          <div class="row row-picks">
+            <div class="emoji-pick" id="emoji-pick">
+              <button type="button" class="emoji-opt selected" data-emoji="✨">✨</button>
+              <button type="button" class="emoji-opt" data-emoji="🌷">🌷</button>
+              <button type="button" class="emoji-opt" data-emoji="📚">📚</button>
+              <button type="button" class="emoji-opt" data-emoji="💧">💧</button>
+              <button type="button" class="emoji-opt" data-emoji="🏃">🏃</button>
+              <button type="button" class="emoji-opt" data-emoji="🧺">🧺</button>
+              <button type="button" class="emoji-opt" data-emoji="💌">💌</button>
+            </div>
+            <select id="priority">
+              <option value="low">🌿 low</option>
+              <option value="medium" selected>🌼 medium</option>
+              <option value="high">🌺 high</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-add">add to my list <span>＋</span></button>
+        </form>
+      </div>
+
+      <div id="todo-status" class="status"></div>
+
+      <div class="progress-wrap" id="progress-wrap" hidden>
+        <div class="progress-label">
+          <span id="progress-text">0 of 0 done</span>
+          <span id="progress-percent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list"></ul>
+    </section>
+
+    <!-- ================= JOURNAL PANEL ================= -->
+    <section id="panel-journal" class="panel">
+
+      <div class="card form-card">
+        <p class="mini-label">today's mood</p>
+        <div class="mood-row" id="mood-row">
+          <button type="button" class="mood-opt" data-mood="overwhelmed"><span>🌧️</span>overwhelmed</button>
+          <button type="button" class="mood-opt" data-mood="meh"><span>☁️</span>meh</button>
+          <button type="button" class="mood-opt selected" data-mood="okay"><span>🌤️</span>okay</button>
+          <button type="button" class="mood-opt" data-mood="happy"><span>☀️</span>happy</button>
+          <button type="button" class="mood-opt" data-mood="excited"><span>⭐</span>excited</button>
+        </div>
+
+        <form id="journal-form">
+          <p class="mini-label">what happened today? 🌿</p>
+          <textarea id="journal-content" rows="5" placeholder="write whatever's on your mind..." required maxlength="4000"></textarea>
+          <button type="submit" class="btn-add">save entry <span>💾</span></button>
+        </form>
+      </div>
+
+      <div id="journal-status" class="status"></div>
+
+      <div id="journal-list" class="journal-list"></div>
+    </section>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
