@@ -1,4 +1,4 @@
-cd G:\todo-api\todo-apicd G:\todo-api\todo-api# 🌸 Daily Planner — Todos + Journal
+# 🌸 Daily Planner — Todos + Journal
 
 A cozy, pastel, animated to-do list **and** daily journal, in one app:
 
@@ -6,6 +6,15 @@ A cozy, pastel, animated to-do list **and** daily journal, in one app:
 - Pastel "aesthetic journal" styling: soft colors, tape/paper details, mood picker, emoji tags, progress bar, smooth add/remove animations
 - A **REST API** underneath for both todos and journal entries (curl/Postman/your own frontend all still work)
 - **SQLite** storage — everything persists in a local `todos.db` file, no external database needed
+
+## Screenshots
+
+   ### To-dos
+   ![Todos tab](screenshots/todos.png)
+
+   ### Journal
+   ![Journal tab](screenshots/journal.png)
+
 
 ## Run it in VS Code (or anywhere with Python)
 
